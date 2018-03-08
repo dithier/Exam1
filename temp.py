@@ -16,6 +16,14 @@ d_s = {'index':["Never",'Gonna','Let','You','Down'],
  
 
 def yougetme(d,i):
-    return d["index"][i]
+    listing = [x for v in d.values() for x in v]
+    return d["data"][listing.index(i)]
 
-print(d_i["index"])
+""" yougetme(d_s, "Never) should return 2
+yougetme(d_i,2) should return Never
+"""
+
+test = [x for v in d_i.values() for x in v]
+two = test.index(2)
+
+print(yougetme(d_s, "Down"))
